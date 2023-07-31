@@ -19,7 +19,6 @@ type NavbarProps = {
 };
 
 const Navbar: React.FC<NavbarProps> = ({ onOpen }) => {
-  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Flex px={"10px"} justify={"center"} as={Card} height={"56px"}>
       <Flex align={"center"}>
@@ -33,12 +32,6 @@ const Navbar: React.FC<NavbarProps> = ({ onOpen }) => {
         <Spacer display={{ base: "block", md: "none" }} />
         <ChakraImage as={Image} boxSize={"30px"} alt="logo" src={Logo} />
         <Spacer />
-        <IconButton
-          aria-label="color mode"
-          icon={colorMode === "dark" ? <SunIcon /> : <MoonIcon />}
-          onClick={toggleColorMode}
-          variant={"ghost"}
-        />
       </Flex>
     </Flex>
   );
