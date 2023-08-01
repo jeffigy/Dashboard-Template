@@ -1,14 +1,5 @@
 "use client";
-import {
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
-  CloseButton,
-  Flex,
-  Text,
-  useColorMode,
-} from "@chakra-ui/react";
+import { Card, CardBody, CardFooter, CardHeader, Flex } from "@chakra-ui/react";
 import React from "react";
 import { Archive, Layout, ShoppingBag, Map, LogIn } from "react-feather";
 import DarkMode from "./DarkMode";
@@ -25,9 +16,8 @@ const Sidebar: React.FC<SidebarProps> = ({ appName, onClose, display }) => {
   const NavItems = [
     { name: "Landing Page", icon: Layout, to: "/" },
     { name: "Dashboard", icon: ShoppingBag, to: "/dashboard" },
-    { name: "Explore", icon: Map, to: "/explore" },
-    { name: "Featured Products", icon: Archive, to: "/products" },
-    { name: "Register", icon: LogIn, to: "/register" },
+    { name: "Page 1", icon: Map, to: "/page1" },
+    { name: "Page 2", icon: Archive, to: "/page2" },
   ];
   return (
     <Card

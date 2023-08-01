@@ -1,14 +1,6 @@
-import {
-  Button,
-  Flex,
-  Icon,
-  Text,
-  useBreakpointValue,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Flex, Icon, Text, useColorModeValue } from "@chakra-ui/react";
 import Link from "next/link";
 import React from "react";
-import { BellIcon } from "@chakra-ui/icons";
 import { usePathname } from "next/navigation";
 type NavLinkProps = {
   name: string;

@@ -1,25 +1,15 @@
 "use client";
-import React, { useEffect } from "react";
-import Navbar from "./Navbar/Navbar";
 import {
-  Button,
-  Card,
-  CloseButton,
   Drawer,
-  DrawerBody,
-  DrawerCloseButton,
   DrawerContent,
-  DrawerFooter,
-  DrawerHeader,
   DrawerOverlay,
   Flex,
-  Input,
   useBreakpointValue,
-  useColorMode,
   useDisclosure,
 } from "@chakra-ui/react";
+import React, { useEffect } from "react";
+import Navbar from "./Navbar/Navbar";
 import Sidebar from "./Sidebar/Sidebar";
-import { appName } from "../../../config";
 
 type LayoutProps = {
   children: React.ReactNode;

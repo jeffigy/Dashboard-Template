@@ -1,5 +1,4 @@
 import {
-  Flex,
   FormControl,
   FormLabel,
   Spacer,
@@ -22,11 +21,7 @@ const DarkMode: React.FC<DarkModeProps> = () => {
         Dark Mode
       </FormLabel>
       <Spacer />
-      <Switch
-        // colorScheme="brand"
-        isChecked={colorMode === "dark"}
-        onChange={toggleColorMode}
-      />
+      <Switch isChecked={colorMode === "dark"} onChange={toggleColorMode} />
     </FormControl>
   );
 };

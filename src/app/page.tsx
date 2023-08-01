@@ -1,5 +1,4 @@
 "use client";
-import CustomSection from "@/Components/LandingPage/CustomSection";
 import { Center, useBreakpointValue } from "@chakra-ui/react";
 
 export default function Home() {

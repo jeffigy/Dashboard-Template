@@ -1,6 +1,5 @@
 import { extendTheme, type ThemeConfig } from "@chakra-ui/react";
 import type { StyleFunctionProps } from "@chakra-ui/styled-system";
-import { mode } from "@chakra-ui/theme-tools";
 import { Button } from "./Button";
 const config: ThemeConfig = {
   initialColorMode: "light",

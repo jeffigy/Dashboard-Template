@@ -1,4 +1,3 @@
-import Navbar from "@/Components/Layout/Navbar/Navbar";
 import React from "react";
 
 type DashboardLayoutProps = {
