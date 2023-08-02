@@ -5,6 +5,7 @@ import {
   DrawerOverlay,
   Flex,
   useBreakpointValue,
+  Box,
   useDisclosure,
 } from "@chakra-ui/react";
 import React, { useEffect } from "react";
@@ -29,10 +30,10 @@ const Layout: React.FC<LayoutProps> = ({ children, appName }) => {
   }, [isMobile, isOpen, onClose]);
 
   return (
-    <Flex padding={"20px"} h={"100vh"}>
+    <Box minH="100vh">
       {/* Sidebar when on desktop size*/}
       <Sidebar
-        display={{ base: "none", md: "block" }}
+        display={{ base: "none", md: "flex" }}
         onClose={onClose}
         appName={appName}
       />
@@ -42,12 +43,14 @@ const Layout: React.FC<LayoutProps> = ({ children, appName }) => {
         <DrawerContent>
           <Sidebar appName={appName} onClose={onClose} />
         </DrawerContent>
-      </Drawer>
-      <Flex direction={"column"} flexGrow={1}>
-        <Navbar onOpen={onOpen} />
+      </Drawer>{" "}
+      {/* Navbar */}
+      <Navbar onOpen={onOpen} />
+      {/* the rest */}
+      <Box ml={{ base: 0, md: "56px", lg: "240px" }} p="4">
         {children}
-      </Flex>
-    </Flex>
+      </Box>
+    </Box>
   );
 };
 export default Layout;

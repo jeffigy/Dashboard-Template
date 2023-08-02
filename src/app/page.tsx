@@ -1,5 +1,5 @@
 "use client";
-import { Center, useBreakpointValue } from "@chakra-ui/react";
+import { Center, Flex, useBreakpointValue } from "@chakra-ui/react";
 
 export default function Home() {
   const screenWidth = useBreakpointValue({
@@ -9,5 +9,5 @@ export default function Home() {
     lg: "lg screen width",
     xl: "xl screen width",
   });
-  return <Center>{screenWidth}</Center>;
+  return <Flex>hehe</Flex>;
 }

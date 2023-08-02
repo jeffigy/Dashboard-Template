@@ -1,10 +1,5 @@
 "use client";
-import {
-  CloseButton,
-  Flex,
-  Text,
-  useColorMode,
-} from "@chakra-ui/react";
+import { CloseButton, Flex, Text, useColorMode } from "@chakra-ui/react";
 import React from "react";
 
 type HeaderProps = { onClose: () => void; appName: string };
@@ -16,6 +11,7 @@ const Header: React.FC<HeaderProps> = ({ onClose, appName }) => {
       display={{ base: "flex", md: "none", lg: "flex" }}
       justify={{ base: "space-between", md: "center" }}
       align={"center"}
+      h={"56px"}
     >
       <Text
         color={colorMode === "dark" ? "brand.200" : "brand.600"}
