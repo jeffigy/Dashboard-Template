@@ -18,7 +18,7 @@ const colors = {
     700: "#004782",
     800: "#002B51",
     900: "#000F21",
-    // bg: "#F5F6FA",
+    bg: "#F5F6FA",
   },
 };
 
@@ -32,7 +32,8 @@ const theme = extendTheme({
     global: (props: StyleFunctionProps) => ({
       body: {
         // bg: props.colorMode === "dark" ? "brand.900" : "brand.bg",
-        // bg: "brand.bg",
+        bg: "brand.bg",
+        // color: "brand.100",
       },
     }),
   },

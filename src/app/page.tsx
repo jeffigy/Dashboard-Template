@@ -1,13 +1,10 @@
-"use client";
-import { Center, Flex, useBreakpointValue } from "@chakra-ui/react";
+async function getData() {
+  const res = await fetch("https://dog.ceo/api/breeds/image/random");
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+}
 
 export default function Home() {
-  const screenWidth = useBreakpointValue({
-    base: "base screen width",
-    sm: "sm screen width",
-    md: "md screen width",
-    lg: "lg screen width",
-    xl: "xl screen width",
-  });
-  return <Flex>hehe</Flex>;
+  return <>hehe</>;
 }
