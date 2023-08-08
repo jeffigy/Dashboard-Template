@@ -65,34 +65,10 @@ const Sidebar: React.FC<SidebarProps> = ({ appName, onClose, display }) => {
         ))}
       </Box>
       <Spacer />
-      <Box alignSelf={"center"}>
+      {/* <Box alignSelf={"center"}>
         <DarkMode />
-      </Box>
+      </Box> */}
     </Flex>
-    // <Card
-    //   borderRadius={"none"}
-    //   display={display}
-    //   zIndex={"1"}
-    //   w={{ base: "full", md: "56px", lg: "240px" }}
-    //   mr={{ base: "none", md: "20px" }}
-    //   h={"calc(100vh - 5px)"}
-    //   mt={"56px"}
-    // >
-    //   <Flex direction={"column"} h={"full"}>
-    //     <CardHeader>
-    //       <Header appName={appName} onClose={onClose} />
-    //     </CardHeader>
-    //     <CardBody
-    //       p={{ base: "20px", md: "0px", lg: "20px" }}
-    //       w={{ base: "full", md: "40px", lg: "full" }}
-    //       alignSelf={"center"}
-    //      w
-    //       overflowY="auto"
-    //     >
-    //
-    //     </CardBody>
-    //
-    //   </Flex>
   );
 };
 export default Sidebar;

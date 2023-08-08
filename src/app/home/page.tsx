@@ -1,15 +1,31 @@
 "use client";
 import StatCard from "@/Components/StatCard";
 import UserCard from "@/Components/UserCard";
-import { Box, Card, GridItem, SimpleGrid, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Text,
+  Card,
+  GridItem,
+  SimpleGrid,
+  VStack,
+  Flex,
+  Icon,
+  HStack,
+} from "@chakra-ui/react";
 import React from "react";
-import { User, Users, AlertTriangle } from "react-feather";
+import { User, Users, AlertTriangle, Calendar } from "react-feather";
 type pageProps = {};
 
 const page: React.FC<pageProps> = () => {
   return (
     <>
-      <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} gap={"10px"}>
+      <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} gap={"10px"}>
+        <StatCard
+          label={"Patients"}
+          value={10}
+          icon={User}
+          colorScheme={"green"}
+        />
         <StatCard
           label={"Patients"}
           value={10}
@@ -123,16 +139,43 @@ const page: React.FC<pageProps> = () => {
           // colSpan={{ base: 1, lg: 2, xl: 1 }}
           display={{ base: "none", md: "block" }}
         >
-          <Card borderRadius={"0"} padding={"5px"} variant={"unstyled"}>
-            <Box
-              style={{
-                height: "0",
-                width: "100%",
-                paddingBottom: "100%",
-                border: "1px solid red",
-              }}
-            ></Box>
-          </Card>
+          <Box
+            bgColor={"white"}
+            mb={"10px"}
+            style={{
+              height: "0",
+              width: "100%",
+              paddingBottom: "100%",
+              // border: "1px solid red",
+            }}
+          >
+            {" "}
+            react-big-calendar here
+          </Box>
+          <Text color={"brand.900"} fontWeight={"semibold"}>
+            Appointments
+          </Text>
+          <Flex
+            cursor={"pointer"}
+            bgColor={"white"}
+            padding={"5px"}
+            align={"center"}
+          >
+            <Flex p={"5px"} bgColor={"brand.600"} mr={"5px"}>
+              <Icon color={"white"} as={Calendar} boxSize={"30px"} />
+            </Flex>
+            <Flex direction={"column"}>
+              <Text lineHeight={"120%"} fontSize={"14px"}>
+                August 30,2023{" "}
+              </Text>
+              <Text lineHeight={"120%"} fontSize={"14px"}>
+                10:00 am
+              </Text>
+              <Text lineHeight={"120%"} color={"gray.500"} fontSize={"12px"}>
+                Building Name
+              </Text>
+            </Flex>
+          </Flex>
         </GridItem>
       </SimpleGrid>
     </>

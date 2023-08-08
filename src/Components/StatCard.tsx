@@ -15,7 +15,7 @@ const StatCard: React.FC<StatCardProps> = ({
   colorScheme,
 }) => {
   return (
-    <Card justify={"center"} p={"10px"} variant={"unstyled"}>
+    <Card justify={"center"} p={"10px"} variant={"unstyled"} borderRadius={0}>
       <Flex justify={"space-between"} align={"center"}>
         <Icon
           opacity={"50%"}
