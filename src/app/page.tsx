@@ -1,10 +1,22 @@
-async function getData() {
-  const res = await fetch("https://dog.ceo/api/breeds/image/random");
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
-}
-
+"use client";
+import "react-big-calendar/lib/css/react-big-calendar.css";
+import { Calendar, momentLocalizer } from "react-big-calendar";
+const localizer = momentLocalizer(moment);
+import moment from "moment";
+import event from "./event";
 export default function Home() {
-  return <>hehe</>;
+  return (
+    <div style={{ height: 700 }}>
+      <Calendar
+        localizer={localizer}
+        events={event}
+        startAccessor="start"
+        endAccessor="end"
+        defaultDate={new Date(2015, 3, 1)}
+        views={{
+          month: true,
+        }}
+      />
+    </div>
+  );
 }
