@@ -2,22 +2,9 @@
 import StatCard from "@/Components/StatCard";
 import UserCard from "@/Components/UserCard";
 
-import {
-  Box,
-  Text,
-  Card,
-  GridItem,
-  SimpleGrid,
-  Flex,
-  Icon,
-} from "@chakra-ui/react";
+import { GridItem, SimpleGrid } from "@chakra-ui/react";
 import React from "react";
-import {
-  User,
-  Users,
-  AlertTriangle,
-  Calendar as CalendarIcon,
-} from "react-feather";
+import { User, Users, AlertTriangle } from "react-feather";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 const localizer = momentLocalizer(moment);
@@ -73,10 +60,13 @@ const page: React.FC<pageProps> = () => {
           />
         </GridItem>
         <GridItem
+          h={"inherit"}
           bgColor={"white"}
           padding={"5px"}
           display={{ base: "none", xl: "block" }}
+          overflowY={"auto"}
         >
+          <UserCard />
           <UserCard />
           <UserCard />
           <UserCard />

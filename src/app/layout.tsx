@@ -1,7 +1,7 @@
 import { Providers } from "./provider";
 import Layout from "@/Components/Layout/Layout";
 import { appName } from "../../config";
-import { Inter } from "@next/font/google";
+import { Inter } from "next/font/google";
 export const metadata = {
   title: appName,
 };
