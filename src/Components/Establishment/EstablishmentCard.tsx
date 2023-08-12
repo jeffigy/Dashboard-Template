@@ -17,7 +17,7 @@ const EstablishmentCard: React.FC<EstablishmentCardProps> = ({
     <Card
       variant={"unstyled"}
       p={"10px"}
-      w={{ base: "300px", sm: "400px", md: "550px", lg: "800px" }}
+      w={{ base: "300px", sm: "400px", md: "550px" }}
       mb={"10px"}
     >
       <Flex align={"center"} justify={"space-between"} cursor={"pointer"}>

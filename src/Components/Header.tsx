@@ -6,7 +6,7 @@ type HeaderProps = {
 
 const Header: React.FC<HeaderProps> = ({ label }) => {
   return (
-    <Text as={"h1"} color={"brand.900"}>
+    <Text as={"h1"} color={"brand.900"} mb={"20px"}>
       {label}
     </Text>
   );
