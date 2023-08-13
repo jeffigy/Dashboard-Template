@@ -1,18 +1,16 @@
 "use client";
 import Header from "@/Components/Header";
-import { InfoOutlineIcon } from "@chakra-ui/icons";
 import {
   Box,
-  Button,
-  Card,
-  CardBody,
   Flex,
   IconButton,
   Input,
+  InputGroup,
+  InputRightElement,
 } from "@chakra-ui/react";
 import React from "react";
 import DataTable from "react-data-table-component";
-import { Info } from "react-feather";
+import { Info, Search } from "react-feather";
 
 type pageProps = {};
 
@@ -47,11 +45,20 @@ const page: React.FC<pageProps> = () => {
 
   return (
     <>
-      <Header label={"Patient"} />
+      <Header label={"Patients"} />
       <Flex direction={"column"} align={"center"}>
-        <Box w={"container.sm"} bgColor={"white"} p={"10px"}>
+        <Box
+          w={{ base: "300px", sm: "450px", md: "container.sm" }}
+          bgColor={"white"}
+          p={"10px"}
+        >
           <Flex justify={"end"}>
-            <Input placeholder="Search Patient" w={"base"} mb={"10px"} />
+            <InputGroup w="base">
+              <Input placeholder="Search Patient" mb={"10px"} />
+              <InputRightElement>
+                <Search />
+              </InputRightElement>
+            </InputGroup>
           </Flex>
 
           <Box border={"1px solid"} borderColor={"gray.100"}>
